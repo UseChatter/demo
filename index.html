@@ -218,7 +218,7 @@ input{
             }else if(login == true){
               $.ajax({
                    type:"GET",
-                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + window.name + " has left the chat"
+                   url:"error!blocked-by-google" + window.name + " has left the chat"
                });
               firebase.auth().signOut().then(function() {
                 window.login = false;
@@ -252,7 +252,7 @@ input{
               document.getElementById("text").placeholder = "Come On, Join the Conversation!";
               $.ajax({
                    type:"GET",
-                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + result.user.displayName + " has joined the chat"
+                   url:"error! clocked-by-google" + result.user.displayName + " has joined the chat"
                });
             }
               // other stuff here
@@ -271,7 +271,7 @@ input{
                if(login == true){
                    $.ajax({
                        type:"GET",
-                       url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + window.name + " has left the chat"
+                       url:"error! blocked-by-google" + window.name + " has left the chat"
                     });
                   firebase.auth().signOut();
                }
@@ -300,7 +300,7 @@ input{
 
                /*$.ajax({
                    type:"GET",
-                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + name + " has joined the chat"
+                   url:"error! blocked-by-google" + name + " has joined the chat"
                });*/
             
      
@@ -336,7 +336,7 @@ input{
 
                function update(){
                 $.ajax({
-                  url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta",
+                  url:"error! blocked-by-google",
                   type:"GET",
                   success:function(data){
                     if(prev != data){
@@ -378,7 +378,7 @@ input{
 
                             $.ajax({
                                 type:"GET",
-                                url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + name + ": " + text.value,
+                                url:"error! blocked-by-google" + name + ": " + text.value,
                                 success:function(data){
                                     //alert(data);
                                     text.value = "";
@@ -394,7 +394,7 @@ input{
 
                         $.ajax({
                             type:"GET",
-                            url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + name + ": " + text.value,
+                            url:"error! blocked-by-google" + name + ": " + text.value,
                             success:function(data){
                                 //alert(data);
                                 text.value = "";
