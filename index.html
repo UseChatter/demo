@@ -27,7 +27,7 @@
 
 #about {
   top: 75px;
-  background-color: #1967e5;
+  background-color: #4CAF50;
 }
     .center {
   display: block;
@@ -96,13 +96,13 @@ input{
     width:100%;
     height:10%;
     position:absolute;
-    background-color:#116bc4;
+    background-color:#ffa551;
     color:white;
     text-align:center;
     font-family:Arial;
 }
 #wrap{
-    background-color:#4073a5;
+    background-color:#cc8e55;
     position:absolute;
     height:80%;
     width:100%;
@@ -138,7 +138,7 @@ input{
     left:80%;
     top:90%;
     position:absolute;
-    background-color:#4073a5;
+    background-color:#cc8e55;
     background-image:url(sendicon.png);
     background-repeat:no-repeat;
     background-position:center;
@@ -146,7 +146,7 @@ input{
     
 }
 #send:active{
-    background-color:#4b89c6;
+    background-color:#e8a363;
 }
 .non_mod_text{
     position:relative;
@@ -156,7 +156,7 @@ input{
     left:10%;
     background-color:white;
     border-radius:5px;
-    border:3px solid darkblue;
+    border:3px solid orange;
     overflow:hidden;
 }
 .add_padding{
@@ -164,7 +164,7 @@ input{
 }
 </style>
     </head>
-    <body style="background:#0349ba;">
+    <body style="background:#ffb36d;">
         
         
        
@@ -218,7 +218,7 @@ input{
             }else if(login == true){
               $.ajax({
                    type:"GET",
-                   url:"error!blocked-by-google" + window.name + " has left the chat"
+                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + window.name + " has left the chat"
                });
               firebase.auth().signOut().then(function() {
                 window.login = false;
@@ -252,7 +252,7 @@ input{
               document.getElementById("text").placeholder = "Come On, Join the Conversation!";
               $.ajax({
                    type:"GET",
-                   url:"error! clocked-by-google" + result.user.displayName + " has joined the chat"
+                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + result.user.displayName + " has joined the chat"
                });
             }
               // other stuff here
@@ -271,7 +271,7 @@ input{
                if(login == true){
                    $.ajax({
                        type:"GET",
-                       url:"error! blocked-by-google" + window.name + " has left the chat"
+                       url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + window.name + " has left the chat"
                     });
                   firebase.auth().signOut();
                }
@@ -300,10 +300,12 @@ input{
 
                /*$.ajax({
                    type:"GET",
-                   url:"error! blocked-by-google" + name + " has joined the chat"
+                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + name + " has joined the chat"
                });*/
             
-     
+            if(name == "Adam G"){
+                alert("We know you know about the link Adam. Tell anyone and you will get a lifetime ban from chatter.");
+            }
 
                setInterval(function(){
                 // Blacklist Function
@@ -314,7 +316,7 @@ input{
                 for (var i = 0; i < words.length; i++) {
                     var curword = words[i];
 
-                    if(curword == "cøle" ||   curword == "fuck'er" || curword == "michael" || curword == "cole" || curword == "butt" || curword == "francis" || curword == "fransis" || curword == "mcnulty" || curword == "mcnuty" || curword == "mcnutty" || curword == "mcnuly" || curword == "mccarson" || curword == "mcarson" || curword == "hate" || curword == "fuck" || curword == "bitch" || curword == "shit" || curword == "banned" || curword == "fuck" || curword == "bitch" || curword == "shit" || curword == "elliott"){
+                    if(curword == "cøle" ||   curword == "fuck'er" || curword == "michael" || curword == "cole" || curword == "butt" || curword == "francis" || curword == "fransis" || curword == "mcnulty" || curword == "mcnuty" || curword == "mcnutty" || curword == "mcnuly" || curword == "mccarson" || curword == "mcarson" || curword == "hate" || curword == "fuck" || curword == "bitch" || curword == "shit" || curword == "crap" || curword == "fuck" || curword == "bitch" || curword == "shit" || curword == "elliott" || curword="Crap"){
                         alert("This word is banned. Your message has been deleted. This incident has been reported.");
                         text.value = "";
                         var d = new Date();
@@ -336,7 +338,7 @@ input{
 
                function update(){
                 $.ajax({
-                  url:"error! blocked-by-google",
+                  url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta",
                   type:"GET",
                   success:function(data){
                     if(prev != data){
@@ -378,7 +380,7 @@ input{
 
                             $.ajax({
                                 type:"GET",
-                                url:"error! blocked-by-google" + name + ": " + text.value,
+                                url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + name + ": " + text.value,
                                 success:function(data){
                                     //alert(data);
                                     text.value = "";
@@ -394,7 +396,7 @@ input{
 
                         $.ajax({
                             type:"GET",
-                            url:"error! blocked-by-google" + name + ": " + text.value,
+                            url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + name + ": " + text.value,
                             success:function(data){
                                 //alert(data);
                                 text.value = "";
