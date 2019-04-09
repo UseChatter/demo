@@ -3,12 +3,12 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Chatter 3.1</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+        <title>Chatter 2.0</title>
         <link rel="shortcut icon" type="image/png" href="logofavicon.png"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
         <style>
+            
 #mySidenav a {
   position: absolute;
   left: -80px;
@@ -99,13 +99,13 @@ input{
     width:100%;
     height:10%;
     position:absolute;
-    background-color:#107710;
+    background-color:#ffa551;
     color:white;
     text-align:center;
     font-family:Arial;
 }
 #wrap{
-    background-color:#333333;
+    background-color:#cc8e55;
     position:absolute;
     height:80%;
     width:100%;
@@ -141,7 +141,7 @@ input{
     left:80%;
     top:90%;
     position:absolute;
-    background-color:#333333;
+    background-color:#cc8e55;
     background-image:url(sendicon.png);
     background-repeat:no-repeat;
     background-position:center;
@@ -149,7 +149,7 @@ input{
     
 }
 #send:active{
-    background-color:#7a7a7a;
+    background-color:#e8a363;
 }
 .non_mod_text{
     position:relative;
@@ -167,13 +167,12 @@ input{
 }
 </style>
     </head>
-    <body style="background:green;">
+    <body style="background:#ffb36d;">
         
-        <a target="_blank" style="position: left; color: lightgray; padding:10px;float: left;" href="/chatterhelp">Need Help?</a>
         
-        <a target="_blank" style="position: right; color: lightgray; padding:10px;float: right;" href="https://docs.google.com/forms/d/e/1FAIpQLSd4qwRk9krZqGubBirV2LissVCDCh1K0N3G8CHxB7Fb5MHVsg/viewform">Report Abuse</a>
+       
 
-        <img src="https://raw.githubusercontent.com/colecci/chatter/master/logo.png" alt="Logo" height="39" width="39" class="center">
+        <img src="https://raw.githubusercontent.com/UseChatter/chatter-logo-full-set-2.0/master/chatter-logo.png" alt="Logo" height="29" width="229" class="center">
         
         <div id = "nav">
             <span id="hey"></span>
@@ -187,7 +186,7 @@ input{
             
         </div>
         <div id="mySidenav" class="sidenav">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKClkXfiJ-VkkaGgJrKwZf4H22Ff5-ba6DpSjbwzo8tRQ6yg/viewform" id="about">Submit an Idea</a>
+     
     </div>
 
     <div class="icon-bar">
@@ -228,7 +227,7 @@ input{
                 window.login = false;
                 document.getElementById("hey").innerHTML = "";
                 window.name = "Guest";
-                tc.innerHTML = "Login with Google"
+                tc.innerHTML = '<img src="google.png" width="150px;">';
                 //style="background: none;border: none;width: 150px;padding: 0px"
                 tc.style.background = "none";
                 tc.style.border = "none";
@@ -306,6 +305,10 @@ input{
                    type:"GET",
                    url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + name + " has joined the chat"
                });*/
+            
+            if(name == "Adam G"){
+                alert("We know you know about the link Adam. Tell anyone and you will get a lifetime ban from chatter.");
+            }
 
                setInterval(function(){
                 // Blacklist Function
@@ -345,7 +348,7 @@ input{
                       document.getElementById("chat").innerHTML = "";
                       welcomeNote.className = "non_mod_text";
 
-                      welcomeNote.innerHTML = "InfoBot: " + "<span style = 'color:darkgreen;'>Hello there, welcome to Chatter! Before you get started with your journey, we would like you to know about our simple rules. You may not abuse this program with inappropriate/hurtful content. Failure to follow the rule will result in suspension, added blacklist characters including your name, and banning of your computer. Admins can access/view all messages at all times. Some names and words are banned. Thanks and have fun! Chatter Version 3.1</span>";
+                      welcomeNote.innerHTML = "InfoBot: " + "<span style = 'color:darkorange;'>Hello there, welcome to Chatter! Before you get started with your journey, we would like you to know about our simple rules. You may not abuse this program with inappropriate/hurtful content. Failure to follow the rule will result in suspension, added blacklist characters including your name, and banning of your computer. Admins can access/view all messages at all times. Some names and words are banned. Thanks and have fun! Chatter Version 2.1</span>";
 
                       chat.appendChild(welcomeNote);
 
@@ -373,6 +376,23 @@ input{
                     });
                    
                 }
+            
+                document.getElementById("send").onkeydown = function (event){
+                    if (event.keyCode === 13) {
+                        if(text.value.length > 0 && login == true){
+
+                            $.ajax({
+                                type:"GET",
+                                url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + name + ": " + text.value,
+                                success:function(data){
+                                    //alert(data);
+                                    text.value = "";
+                                }
+                            });
+                        }
+                    }
+                }
+            
                 document.getElementById("send").onclick = function(){
 
                     if(text.value.length > 0 && login == true){
