@@ -1,247 +1,20 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Chatter 2.1</title>
+        <title>Chatter 2.3</title>
         <link rel="shortcut icon" type="image/png" href="logofavicon.png"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.alert1 {
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-}
-
-.closebtn1 {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
-  color: black;
-}
-</style>
-
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-.callout {
-  position: fixed;
-  bottom: 35px;
-  right: 20px;
-  margin-left: 20px;
-  max-width: 300px;
-}
-
-.callout-header {
-  padding: 45px 35px;
-  background: red;
-  font-size: 50px;
-  color: white;
-}
-
-.callout-container {
-  padding: 25px;
-  background-color: lightgrey;
-  color: black
-}
-
-.closebtn {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.closebtn:hover {
-  color: lightgrey;
-}
-</style>
-<body>
-<div class="callout">
-  <div class="callout-header">WARNING!</div>
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
-  <div class="callout-container">
-    <p>The chat you are viewing is a demo version of the official Chatter 2.0. This demo will be shutting down in <b>2</b> days! <b>All DEMO accounts and messages will be deleted!</b> To continue with Chatter, please visit the official <a href="#">Chatter web app</a>! Need help? Contact us for more information on this topic at <a href="mailto:c.e.o@cci.services">c.e.o@cci.services</a></p>
-  </div>
-</div>
-</html>
-
-        <style>
-            
-#mySidenav a {
-  position: absolute;
-  left: -80px;
-  transition: 0.3s;
-  padding: 15px;
-  width: 80px;
-  text-decoration: none;
-  font-size: 30px;
-  color: white;
-  border-radius: 0 5px 5px 0;
-}
-
-#mySidenav a:hover {
-  left: 0;
-}
-
-#about {
-  top: 75px;
-  background-color: #4CAF50;
-}
-    .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 4%;
-}
-body {margin:0;}
-
-.icon-bar {
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.icon-bar a {
-  display: block;
-  text-align: center;
-  padding: 16px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 20px;
-}
-
-.icon-bar a:hover {
-  background-color: #7ccaff;
-}
-
-.github {
-  background: #000;
-  color: white;
-}
-    
-    .google {
-  background: #dd4b39;
-  color: white;
-}
-
-.twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-
-.youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.content {
-  margin-left: 75px;
-  font-size: 30px;
-}
-*{
-    padding:0;
-    margin:0;
-}
-input{
-    font-size:20px;
-}
-#nav{
-    border-bottom:1px solid silver;
-    width:100%;
-    height:10%;
-    position:absolute;
-    background-color:#4a83e0;
-    color:white;
-    text-align:center;
-    font-family:Arial;
-}
-#wrap{
-    background-color:#4e85aa;
-    position:absolute;
-    height:80%;
-    width:100%;
-    top:10%;
-}
-#chat{
-    top:15%;
-    height:70%;
-    /**border:1px solid white;**/
-    width:80%;
-    position:absolute;
-    left:10%;
-    overflow-y:scroll;
-}
-/**
-#hashtag{
-    width:20%;
-    height:9%;
-    top:90%;
-    position:absolute;
-}
-**/
-#text{
-    top:90%;
-    width:80%;
-    height:9%;
-    left:0%;
-    position:absolute;
-}
-#send{
-    width:20%;
-    height:10%;
-    left:80%;
-    top:90%;
-    position:absolute;
-    background-color:#4e85aa;
-    background-image:url(sendicon.png);
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:45%;
-    
-}
-#send:active{
-    background-color:#4e8bed;
-}
-.non_mod_text{
-    position:relative;
-    display:block;
-    width:80%;
-    height:20%;
-    left:10%;
-    background-color: #ffddcc;
-    border-radius:5px;
-    border:1px solid Black;
-    overflow:hidden;
-    margin:5px;
-}
-.add_padding{
-    padding:5px;
-}
-</style>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body style="background:#5595fc;">
-        
-        
-       
 
         <img src="https://raw.githubusercontent.com/UseChatter/chatter-logo-full-set-2.0/master/chatter-logo.png" alt="Logo" height="29" width="229" class="center">
         
         <div id = "nav">
             <span id="hey"></span>
-            <button id="tc" style="background: none;border: none;width: 150px;padding: 0px"><img src="google.png" width="150px;"></button>
+            <center><button id="tc" style="background: none;border: none;width: 150px;padding: 0px"><img src="google.png" width="150px;"></button></center>
         </div>
         <div id = "wrap"></div>
         <div id = "chat"></div>
@@ -258,12 +31,34 @@ input{
       <a href="https://github.com/UseChatter" class="github"><i class="fa fa-github"></i></a> 
         <a href="https://plus.google.com/101801779968209343101/" class="google"><i class="fa fa-google-plus"></i></a> 
         <a href="https://twitter.com/usechatter" class="twitter"><i class="fa fa-twitter"></i></a>
-      <a href="https://www.youtube.com/channel/UCHCbhcaX_KUwmTMj-2x2pXA" class="youtube"><i class="fa fa-youtube"></i></a> 
+      <a href="https://www.youtube.com/channel/UCHCbhcaX_KUwmTMj-2x2pXA" class="youtube"><i class="fas fa-youtube"></i></a> 
+    </div>
+
+    <div class="action-bar">
+      <a class="createpriv"><i style="font-size: 15px">Private Chat</i></a>
+      <a id="cpriv" class="createpriv"><i class="fa fa-plus" title="Create Private Chat"></i></a> 
+      <a id="jpriv" class="joinpriv"><i class="fa fa-weixin" title="Join Private Chat"></i></a> 
     </div>
         <script src = "https://jaydengames.000webhostapp.com/jquery-3.3.1.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
         <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=de951cc5caf50' async='true'></script> 
         <script>
+
+          document.getElementById("cpriv").onclick = function(){
+            var rt = prompt("Please enter a unique and secure chat room code made up of numbers and letters. Do NOT use generic codes like 'password' or 'chatroom' to avoid collisons with codes. Anyone with this code can join the private chatroom: ");
+
+            localStorage.setItem("chatter_private_room_number", rt);
+
+            location.href = "privatechat.html";
+          }
+
+          document.getElementById("jpriv").onclick = function(){
+            var rt = prompt("Please enter the secure chat room code for the chatroom you are entering: ");
+
+            localStorage.setItem("chatter_private_room_number", rt);
+
+            location.href = "privatechat.html";
+          }
             
             // DO NOT TAMPER WITH THIS CODE. TAMPERING WITH THIS CODE IS IN VIOLATION OF THE CHATTER TERMS OF USE AND IS PUNISHABLE BY PERMENTANT BAN ON ALL CCI, RASIPAINT, AND MICMACRO PRODUCTS INCLUDING CHATTER.
             
@@ -289,13 +84,13 @@ input{
             }else if(login == true){
               $.ajax({
                    type:"GET",
-                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + window.name + " has left the chat"
+                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + window.name + " has left the chat."
                });
               firebase.auth().signOut().then(function() {
                 window.login = false;
                 document.getElementById("hey").innerHTML = "";
                 window.name = "Guest";
-                tc.innerHTML = '<img src="google.png" width="150px;">';
+                tc.innerHTML = '<img src="google.png" width="100px;">';
                 //style="background: none;border: none;width: 150px;padding: 0px"
                 tc.style.background = "none";
                 tc.style.border = "none";
@@ -344,7 +139,7 @@ input{
                        type:"GET",
                        url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + window.name + " has left the chat"
                     });
-                  firebase.auth().signOut();
+                  //firebase.auth().signOut();
                }
             }
 
@@ -410,10 +205,38 @@ input{
                     }
                 }
                },100);*/
+            
+                document.body.onload = function(){
+                    if(login == true){
+                      window.login = true;
+                      document.getElementById("hey").innerHTML = "Hello, " + window.name;
+                      tc.innerHTML = "Logout"
+                      tc.style.background = "white";
+                      tc.style.border = "1px solid black";
+                      tc.style.width = "50px";
+                      tc.style.padding = "2px";
+                      document.getElementById("text").placeholder = "Come On, Join the Conversation!";
+                        
+                        $.ajax({
+                           type:"GET",
+                           url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta&q=" + window.name + " has joined the chat"
+                       });
+                    }
+                }
 
                setInterval(update,500);
 
-               function update(){
+             function update(){
+               if(login == true){
+                  window.login = true;
+                  document.getElementById("hey").innerHTML = "Hello, " + window.name;
+                  tc.innerHTML = "Logout"
+                  tc.style.background = "white";
+                  tc.style.border = "1px solid black";
+                  tc.style.width = "50px";
+                  tc.style.padding = "2px";
+                  document.getElementById("text").placeholder = "Come On, Join the Conversation!";
+                }
                 $.ajax({
                   url:"https://chatochondria.000webhostapp.com/openchat.php?ver=verbeta",
                   type:"GET",
@@ -422,7 +245,7 @@ input{
                       document.getElementById("chat").innerHTML = "";
                       welcomeNote.className = "non_mod_text";
 
-                      welcomeNote.innerHTML = "InfoBot: " + "<span style = 'color:darkblue;'>Hello there, welcome to Chatter! Before you get started with your journey, we would like you to know about our simple rules. You may not abuse this program with inappropriate/hurtful content. Failure to follow the rule will result in suspension, added blacklist characters including your name, and banning of your computer. Admins can access/view all messages at all times. Some names and words are banned. Thanks and have fun! Chatter Version 2.1</span>";
+                      welcomeNote.innerHTML = "InfoBot: " + "<span style = 'color:darkblue;'>Hello there, welcome to Chatter! Before you get started with your journey, we would like you to know about our simple rules. You may not abuse this program with inappropriate/hurtful content. Failure to follow the rule will result in suspension, added blacklist characters including your name, and banning of your computer. Admins can access/view all messages at all times. Some names and words are banned. Thanks and have fun! Chatter Version 2.3</span>";
 
                       chat.appendChild(welcomeNote);
 
